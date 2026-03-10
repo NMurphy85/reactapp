@@ -5,13 +5,17 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Books from "./components/Books";
+
+import {books} from './data'
+
+
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-       <Route path="/" exact element={<Home />} />
-       <Route path="/books"  element={<Books />} />
+       <Route path="/home" exact element={<Home />} />
+       <Route path="/books"  element={<Books books={books} />}/>
 
         </Routes>
         <Nav />
