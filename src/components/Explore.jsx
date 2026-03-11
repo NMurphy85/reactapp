@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Explore = () => {
   return (
    <section id="explore">
@@ -8,11 +8,11 @@ const Explore = () => {
             <h2 className="section__title">
                 Explore more <span className="purple">Books</span>
             </h2>
-        <a href="/Books" >
+        <Link to="/books" >
         <button className="btn">
             Explore Books
         </button>
-        </a>
+        </Link>
         </div>
     </div>
    </section>
