@@ -8,6 +8,7 @@ import Books from "./components/Books";
 
 import {books} from './data'
 import Bookinfo from "./Pages/Bookinfo";
+import Cart from "./Pages/Cart";
 
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
       <div className="App">
       <Nav />
         <Routes>
-       <Route path="/home" exact element={<Home />} />
-       <Route path="/books" element={<Books books={books} />}/>
+       <Route path="/" element={<Home />} />
+       <Route path="/books" element={() => <Books books={books} />}/>
       <Route path='/books/:id' element= {<Bookinfo books={books} />} />
+       <Route path="/cart" element={<Cart books={books} />}/>
         </Routes>
         <Home />
         <Footer />
